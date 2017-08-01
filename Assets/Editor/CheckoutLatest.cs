@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using UnityEngine;
+using UnityEditor;
 
 public static class CheckoutLatest
 {
@@ -31,6 +32,8 @@ public static class CheckoutLatest
 		process.StartInfo = startInfo;
 		process.Start();
 
-		process.WaitForExit();
+		process.WaitForExit(200000);
+
+		AssetDatabase.Refresh();
 	}
 }
