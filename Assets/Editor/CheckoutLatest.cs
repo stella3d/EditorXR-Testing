@@ -17,6 +17,11 @@ public static class CheckoutLatest
 		StartProcess(gitArguments);
 	}
 
+	public static void RefreshAssets()
+	{
+		AssetDatabase.Refresh();
+	}
+
 	static void StartProcess (string command)
 	{
 		UnityEngine.Debug.Log("git " + command);
